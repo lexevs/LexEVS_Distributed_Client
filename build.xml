@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<project name="Remote LexEVS client" default="all" basedir=".">
+
+    <property name="conf.dir" value="./conf" />
+    <property name="lib.dir" value="./lib" />
+    <property name="src.dir" value="src" />
+    <property name="build.dir" value="./build" />
+	<property name="compile.dir" value="${build.dir}/classes"/>
+
+	
+    <path id="libs">
+        <pathelement location="${conf.dir}"/>
+        <pathelement location="${build.dir}"/>
+    	<pathelement location="${compile.dir}"/>
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        </path>
+
+	<target name="check-compile-condition">
+		<condition property="compiled">
+			<available file="${compile.dir}"/>
+		</condition>
+	</target>
+	
+    <target name="clean"
+    		description="Removes generated test artifacts">
+        <delete dir="${build.dir}" quiet="true"/>
+    </target>
+        	
+	<target name="init" depends="clean" 
+			description="Creates necessary directories">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${compile.dir}"/>
+	</target>
+				
+    <target name="compile" depends="init, check-compile-condition" if="compiled"
+            description="Compiles the unit tests">
+        <javac srcdir="${src.dir}" destdir="${compile.dir}" >
+            <classpath refid="libs"/>
+        </javac>        
+    </target>
+
+  <target name="all" depends="compile" >
+       <java classpathref="libs" classname="org.LexGrid.LexBIG.serviceHolder.LexEVSExampleTest" ></java>
+	</target>
+	
+
+
+</project>
