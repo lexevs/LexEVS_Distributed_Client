@@ -28,8 +28,6 @@
 	<classpathentry kind="lib" path="lib/spring-web-2.5.6.jar"/>
 	<classpathentry kind="lib" path="lib/spring-webmvc-2.5.6.jar"/>
 	<classpathentry kind="lib" path="lib/lexbig.jar"/>
-	<classpathentry kind="lib" path="lib/lexevs-client-framework.jar"/>
-	<classpathentry kind="lib" path="lib/lexevs-core.jar"/>
 	<classpathentry kind="lib" path="lib/LexEVSSecurity.jar"/>
 	<classpathentry kind="lib" path="lib/commons-pool-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/hibernate-annotations-3.4.0.GA.jar"/>
@@ -50,11 +48,8 @@
 	<classpathentry kind="lib" path="lib/org.eclipse.equinox.common_3.2.0.v20060603.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.equinox.preferences_3.2.0.v20060601.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.osgi_3.2.0.v20060601.jar"/>
-	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
 	<classpathentry kind="lib" path="lib/compass-2.2.0.jar"/>
 	<classpathentry kind="lib" path="lib/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="lib/lexevsapi61-beans.jar"/>
-	<classpathentry kind="lib" path="lib/lexevsapi61-framework.jar"/>
 	<classpathentry kind="lib" path="lib/spring-aop-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-asm-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-aspects-3.1.0.RELEASE.jar"/>
@@ -69,9 +64,9 @@
 	<classpathentry kind="lib" path="lib/spring-test-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-tx-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-xml-1.5.9.jar"/>
-	<classpathentry kind="lib" path="lib/struts2-core-2.3.15.1.jar"/>
-	<classpathentry kind="lib" path="lib/struts2-dojo-plugin-2.3.15.1.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/lexevsapi62-beans.jar"/>
+	<classpathentry kind="lib" path="lib/lexevsapi62-framework.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
