@@ -30,7 +30,7 @@ import gov.nih.nci.system.client.ApplicationServiceProvider;
 public class LexEVSServiceHolder {
     private static LexEVSServiceHolder sh_;
     private ApplicationService appService = null;
-	private static final String serviceUrl = "http://ncias-p1302.nci.nih.gov:8080/lexevsapi62";
+	private static final String serviceUrl = "http://lexevsapi62.nci.nih.gov/lexevsapi62/";
 	private LexEVSApplicationService lexevsAppService;
 	public static final String _service = "EvsServiceInfo";
 	

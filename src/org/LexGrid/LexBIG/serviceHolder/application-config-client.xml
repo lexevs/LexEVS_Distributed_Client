@@ -6,7 +6,7 @@
                   <map>
                         <entry key="APPLICATION_SERVICE_BEAN" value-ref="LexEVSApplicationService"/>
                         <entry key="AUTHENTICATION_SERVICE_BEAN" value-ref="EvsAuthenticationProvider"/>
-                        <entry key="APPLICATION_SERVICE_URL" value="http://ncias-p1302.nci.nih.gov:8080/lexevsapi62/http/applicationService"/>
+                        <entry key="APPLICATION_SERVICE_URL" value="http://ncias-p1307.nci.nih.gov:8080/lexevsapi62/http/applicationService"/>
                         <entry key="APPLICATION_SERVICE_CONFIG" value-ref="LexEVSApplicationServiceConfig"/>
                   </map>
             </constructor-arg>
