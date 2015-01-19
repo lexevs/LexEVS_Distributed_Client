@@ -76,7 +76,7 @@ public class LexEVSExampleTest {
 	public void testGetSupportedCodingSchemes() throws Exception{
 		CodingSchemeRenderingList csrl = lbs.getSupportedCodingSchemes();
 		System.out.println("*****************************************************************");
-		System.out.println("PRINTING CODING SCHEMES FROM LEXEVS 5.1 PRODUCTION SERVER");
+		System.out.println("PRINTING CODING SCHEMES FROM LEXEVS 6.2 PRODUCTION SERVER");
 		System.out.println("*****************************************************************");
 		System.out.println("*");
 		System.out.println("*");
