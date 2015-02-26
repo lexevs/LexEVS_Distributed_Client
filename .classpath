@@ -68,5 +68,6 @@
 	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
 	<classpathentry kind="lib" path="lib/lexevsapi62-beans.jar"/>
 	<classpathentry kind="lib" path="lib/lexevsapi62-framework.jar"/>
+	<classpathentry kind="lib" path="lib/lexevs-tree-2.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
