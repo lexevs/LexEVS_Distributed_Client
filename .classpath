@@ -50,7 +50,7 @@
 	<classpathentry kind="lib" path="lib/org.eclipse.osgi_3.2.0.v20060601.jar"/>
 	<classpathentry kind="lib" path="lib/compass-2.2.0.jar"/>
 	<classpathentry kind="lib" path="lib/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="lib/spring-aop-3.1.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-aop-3.1.0.RELEASE.jar" sourcepath="/Users/m029206/.m2/repository/org/springframework/spring-aop/3.1.0.RELEASE/spring-aop-3.1.0.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="lib/spring-asm-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-aspects-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-beans-3.1.0.RELEASE.jar"/>
@@ -68,6 +68,5 @@
 	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
 	<classpathentry kind="lib" path="lib/lexevsapi62-beans.jar"/>
 	<classpathentry kind="lib" path="lib/lexevsapi62-framework.jar"/>
-	<classpathentry kind="lib" path="lib/lexevs-tree-2.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
