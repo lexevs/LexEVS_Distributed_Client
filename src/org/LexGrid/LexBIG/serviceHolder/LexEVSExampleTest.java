@@ -70,13 +70,13 @@ public class LexEVSExampleTest {
 		try {
 			setUp();
 			testTree();
-//			testMappingExtension();
+			testMappingExtension();
 			testGetSupportedCodingSchemes();
-//			testGetCodingSchemeConcepts();
-//			testGetCodingSchemeGraph();
-//			testSimpleSearchExtensionLucene();
-//			testSimpleSearchExtensionContains();
-//			testSimpleSearchExtensionMultiWord();
+			testGetCodingSchemeConcepts();
+			testGetCodingSchemeGraph();
+			testSimpleSearchExtensionLucene();
+			testSimpleSearchExtensionContains();
+			testSimpleSearchExtensionMultiWord();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -94,6 +94,12 @@ public class LexEVSExampleTest {
         TreeService service = TreeServiceFactory.getInstance().getTreeService(lbs);
         LexEvsTree tree = null;
         CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
+        try {
+			lbs.getGenericExtension("tree-utility");
+		} catch (LBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         csvt.setVersion("TestForMultiNamespace");
 //         tree = service.getTree("npo", csvt, "NPO_1607", "npo", "is_a");
          tree = service.getTree("npo", csvt, "NPO_1607","npo");
