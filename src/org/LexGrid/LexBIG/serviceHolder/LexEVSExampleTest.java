@@ -69,8 +69,8 @@ public class LexEVSExampleTest {
 	public void run(){
 		try {
 			setUp();
-			testTree();
-			testMappingExtension();
+//			testTree();
+//			testMappingExtension();
 			testGetSupportedCodingSchemes();
 			testGetCodingSchemeConcepts();
 			testGetCodingSchemeGraph();
