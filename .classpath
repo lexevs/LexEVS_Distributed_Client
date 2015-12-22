@@ -27,7 +27,7 @@
 	<classpathentry kind="lib" path="lib/spring-batch-infrastructure-2.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-web-2.5.6.jar"/>
 	<classpathentry kind="lib" path="lib/spring-webmvc-2.5.6.jar"/>
-	<classpathentry kind="lib" path="lib/lexbig.jar"/>
+	<classpathentry kind="lib" path="lib/lexbig.jar" sourcepath="/lbImpl"/>
 	<classpathentry kind="lib" path="lib/LexEVSSecurity.jar"/>
 	<classpathentry kind="lib" path="lib/commons-pool-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/hibernate-annotations-3.4.0.GA.jar"/>
@@ -68,5 +68,8 @@
 	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
 	<classpathentry kind="lib" path="lib/lexevsapi62-beans.jar"/>
 	<classpathentry kind="lib" path="lib/lexevsapi62-framework.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjrt-1.6.8.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjweaver-1.6.8.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
