@@ -52,6 +52,10 @@ import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.LexGrid.LexBIG.Utility.ConvenienceMethods;
 import org.LexGrid.LexBIG.Utility.Iterators.ResolvedConceptReferencesIterator;
 import org.LexGrid.commonTypes.EntityDescription;
+//import org.lexevs.tree.model.LexEvsTree;
+//import org.lexevs.tree.model.LexEvsTreeNode;
+//import org.lexevs.tree.service.TreeService;
+//import org.lexevs.tree.utility.PrintUtility;
 
 public class LexEVSExampleTest {
 	String THES_SCHEME = "NCI Thesaurus";
@@ -69,14 +73,14 @@ public class LexEVSExampleTest {
 	public void run(){
 		try {
 			setUp();
-//			testTree();
-//			testMappingExtension();
-			testGetSupportedCodingSchemes();
-			testGetCodingSchemeConcepts();
-			testGetCodingSchemeGraph();
-			testSimpleSearchExtensionLucene();
-			testSimpleSearchExtensionContains();
-			testSimpleSearchExtensionMultiWord();
+			testTree();
+			testMappingExtension();
+//			testGetSupportedCodingSchemes();
+//			testGetCodingSchemeConcepts();
+//			testGetCodingSchemeGraph();
+//			testSimpleSearchExtensionLucene();
+//			testSimpleSearchExtensionContains();
+//			testSimpleSearchExtensionMultiWord();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -89,20 +93,14 @@ public class LexEVSExampleTest {
 		lbs = (LexBIGService)LexEVSServiceHolder.instance().getLexEVSAppService();
 	}
 
-	public void testTree(){
-
-        TreeService service = TreeServiceFactory.getInstance().getTreeService(lbs);
+	public void testTree() throws LBException{
+		TreeService service = TreeServiceFactory.getInstance().getTreeService(lbs);
+ //       TreeService service = (TreeService)lbs.getGenericExtension("lex-tree-utility");;
         LexEvsTree tree = null;
         CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
-        try {
-			lbs.getGenericExtension("tree-utility");
-		} catch (LBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        csvt.setVersion("TestForMultiNamespace");
+        csvt.setVersion("April2015");
 //         tree = service.getTree("npo", csvt, "NPO_1607", "npo", "is_a");
-         tree = service.getTree("npo", csvt, "NPO_1607","npo");
+         tree = service.getTree("OBI", csvt, "BFO_0000002","obo");
 //         tree = service.getTree("npo", csvt, "NPO_1607");
             LexEvsTreeNode focusNode = tree.getCurrentFocus();
             List<LexEvsTreeNode> nodeList = service.getEvsTreeConverter().buildEvsTreePathFromRootTree(focusNode);
@@ -141,6 +139,7 @@ public class LexEVSExampleTest {
 						ResolvedConceptReference rcr = itr.next();
 						System.out.println(rcr.getEntityDescription().getContent() + " : " 
 						+ rcr.getSourceOf().getAssociation(0).getAssociatedConcepts().getAssociatedConcept(0).getCode());
+					   break;
 				
 					}
 				} catch (LBException e) {
