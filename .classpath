@@ -36,11 +36,6 @@
 	<classpathentry kind="lib" path="lib/hibernate-validator-3.1.0.GA.jar"/>
 	<classpathentry kind="lib" path="lib/jakarta-regexp-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar"/>
-	<classpathentry kind="lib" path="lib/lucene-analyzers-2.4.1.jar"/>
-	<classpathentry kind="lib" path="lib/lucene-core-2.4.1.jar"/>
-	<classpathentry kind="lib" path="lib/lucene-queries-2.4.1.jar"/>
-	<classpathentry kind="lib" path="lib/lucene-regex-2.4.1.jar"/>
-	<classpathentry kind="lib" path="lib/lucene-snowball-2.4.1.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.core.runtime_3.2.0.v20060603.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.common_2.2.1.v200609210005.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.ecore_2.2.1.v200609210005.jar"/>
@@ -66,13 +61,22 @@
 	<classpathentry kind="lib" path="lib/spring-xml-1.5.9.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
-	<classpathentry kind="lib" path="lib/lexevsapi62-beans.jar"/>
-	<classpathentry kind="lib" path="lib/lexevsapi62-framework.jar"/>
+	<classpathentry kind="lib" path="lib/lexevsapi64-beans.jar"/>
+	<classpathentry kind="lib" path="lib/lexevsapi64-framework.jar"/>
 	<classpathentry kind="lib" path="lib/common-util-1.0.2.jar"/>
 	<classpathentry kind="lib" path="lib/json-20080701.jar"/>
 	<classpathentry kind="lib" path="lib/sqlbuilder-2.0.11.jar"/>
 	<classpathentry kind="lib" path="lib/aspectjrt-1.6.8.jar"/>
 	<classpathentry kind="lib" path="lib/aspectjweaver-1.6.8.jar"/>
 	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-analyzers-common-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-analyzers-phonetic-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-codecs-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-join-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-queries-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-queryparser-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-sandbox-5.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-test-framework-5.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
