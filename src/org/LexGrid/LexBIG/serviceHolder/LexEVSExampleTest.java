@@ -58,7 +58,7 @@ import org.LexGrid.commonTypes.EntityDescription;
 //import org.lexevs.tree.utility.PrintUtility;
 
 public class LexEVSExampleTest {
-	String THES_SCHEME = "NCI Thesaurus";
+	String THES_SCHEME = "Thesaurus";
 	String THES_VERSION;
 	LexBIGService lbs;
 	SearchExtension searchExtension;
@@ -77,9 +77,9 @@ public class LexEVSExampleTest {
 			testMappingExtension();
 			testGetSupportedCodingSchemes();
 			testGetCodingSchemeConcepts();
-//			testGetCodingSchemeGraph();
-//			testSimpleSearchExtensionLucene();
-//			testSimpleSearchExtensionContains();
+			testGetCodingSchemeGraph();
+			testSimpleSearchExtensionLucene();
+			testSimpleSearchExtensionContains();
 //			testSimpleSearchExtensionMultiWord();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -179,7 +179,7 @@ public class LexEVSExampleTest {
 	public void testGetCodingSchemeConcepts() throws Exception{
 		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
 		csvt.setVersion(THES_VERSION);
-		CodedNodeSet cns = lbs.getCodingSchemeConcepts(THES_SCHEME, csvt);
+		CodedNodeSet cns = lbs.getCodingSchemeConcepts(THES_SCHEME, null);
 		cns = cns.restrictToMatchingDesignations("blood", SearchDesignationOption.PREFERRED_ONLY, "LuceneQuery", null);
 		ResolvedConceptReferenceList  rcrl = cns.resolveToList(null, null, null, 10);
 		System.out.println("*");
@@ -198,7 +198,7 @@ public class LexEVSExampleTest {
 	
 	public void testSimpleSearchExtensionLucene() throws Exception{
 		searchExtension = (SearchExtension)lbs.getGenericExtension("SearchExtension");
-		ResolvedConceptReferencesIterator itr = searchExtension.search("boxing", MatchAlgorithm.LUCENE);
+		ResolvedConceptReferencesIterator itr = searchExtension.search("blood", MatchAlgorithm.LUCENE);
 		System.out.println("*");
 		System.out.println("*");
 		System.out.println("*");
