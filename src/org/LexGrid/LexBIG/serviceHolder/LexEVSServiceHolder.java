@@ -19,21 +19,16 @@
  *******************************************************************************/
 package org.LexGrid.LexBIG.serviceHolder;
 
-import org.LexGrid.LexBIG.caCore.interfaces.LexEVSApplicationService;
-import org.LexGrid.LexBIG.caCore.interfaces.LexEVSDistributed;
-import org.LexGrid.LexBIG.caCore.interfaces.LexEVSService;
-
-import gov.nih.nci.evs.security.SecurityToken;
 import gov.nih.nci.system.applicationservice.ApplicationService;
 import gov.nih.nci.system.client.ApplicationServiceProvider;
+
+import org.LexGrid.LexBIG.caCore.interfaces.LexEVSApplicationService;
 
 public class LexEVSServiceHolder {
     private static LexEVSServiceHolder sh_;
     private ApplicationService appService = null;
 
-    //private static final String serviceUrl = "http://bmidev4.mayo.edu:5555/lexevsapi63";
-//	private static final String serviceUrl = "http://lexevsapi6.nci.nih.gov/lexevsapi63";
-	private static final String serviceUrl = "http://localhost:8080/lexevsapi64";
+	private static final String serviceUrl = "http://lexevsapi6.nci.nih.gov/lexevsapi64";
 
 	private LexEVSApplicationService lexevsAppService;
 	public static final String _service = "EvsServiceInfo";
@@ -122,7 +117,5 @@ public class LexEVSServiceHolder {
 			return null;
 		}
 	}
-	
-
 
 }
