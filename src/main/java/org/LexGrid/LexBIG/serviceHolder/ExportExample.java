@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.util.Date;
 import java.util.Vector;
 
-public class Test {
+public class ExportExample {
 
     private static String url = "http://ncias-d1224.nci.nih.gov:7080/lexevsapi63";
 

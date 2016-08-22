@@ -59,7 +59,6 @@ import org.LexGrid.commonTypes.EntityDescription;
 
 public class LexEVSExampleTest {
 	String THES_SCHEME = "Thesaurus";
-	String THES_VERSION;
 	LexBIGService lbs;
 	SearchExtension searchExtension;
 	/**
@@ -74,7 +73,7 @@ public class LexEVSExampleTest {
 		try {
 			setUp();
 //			testTree();
-			testMappingExtension();
+//			testMappingExtension();
 			testGetSupportedCodingSchemes();
 			testGetCodingSchemeConcepts();
 			testGetCodingSchemeGraph();
@@ -170,15 +169,15 @@ public class LexEVSExampleTest {
 			//get a version of the NCI Thesaurus on the server
 			
 			if(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getFormalName().equals(THES_SCHEME) ){
-				if(csrl.getCodingSchemeRendering(i).getRenderingDetail().getVersionTags().getTagCount() > 0)
-				{THES_VERSION = csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getRepresentsVersion();}
+				if(csrl.getCodingSchemeRendering(i).getRenderingDetail().getVersionTags().getTagCount() > 0){}
+//				{THES_VERSION = csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getRepresentsVersion();}
 			}
 		}
 	}
 	
 	public void testGetCodingSchemeConcepts() throws Exception{
-		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
-		csvt.setVersion(THES_VERSION);
+//		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
+//		csvt.setVersion(THES_VERSION);
 		CodedNodeSet cns = lbs.getCodingSchemeConcepts(THES_SCHEME, null);
 		cns = cns.restrictToMatchingDesignations("blood", SearchDesignationOption.PREFERRED_ONLY, "LuceneQuery", null);
 		ResolvedConceptReferenceList  rcrl = cns.resolveToList(null, null, null, 10);
@@ -250,8 +249,8 @@ public class LexEVSExampleTest {
 	}
 	
 	public void testGetCodingSchemeGraph() throws Exception{
-		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
-		csvt.setVersion(THES_VERSION);
+//		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
+//		csvt.setVersion(THES_VERSION);
 		System.out.println("*");
 		System.out.println("*");
 		System.out.println("*");
@@ -261,8 +260,8 @@ public class LexEVSExampleTest {
 		System.out.println("PRINTING GRAPH NODES FOR DESIGNATION \"Blood\"");
 		System.out.println("***********************************************");
 		
-		printTo("C12434",null, lbs, THES_SCHEME, csvt);
-		printFrom("C12434",null, lbs, THES_SCHEME, csvt);
+		printTo("C12434",null, lbs, THES_SCHEME, null);
+		printFrom("C12434",null, lbs, THES_SCHEME, null);
 	}
 	
 

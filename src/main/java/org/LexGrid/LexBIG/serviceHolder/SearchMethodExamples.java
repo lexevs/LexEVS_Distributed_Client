@@ -32,7 +32,7 @@ import org.LexGrid.LexBIG.caCore.security.interfaces.TokenSecurableApplicationSe
  */
 
 
-public class TestSearchMethods {
+public class SearchMethodExamples {
     final static String testID = "TestSearchMethods";
 
     public final int BY_CODE = 1;
@@ -60,7 +60,7 @@ public class TestSearchMethods {
 
 		LexBIGService lbs = null;
 		try {
-			lbs = lbs = (LexBIGService)LexEVSServiceHolder.instance().getLexEVSAppService();;
+			lbs = (LexBIGService)LexEVSServiceHolder.instance().getLexEVSAppService();
 			((TokenSecurableApplicationService) lbs).registerSecurityToken("MedDRA (Medical Dictionary for Regulatory Activities Terminology)", token);
 			((TokenSecurableApplicationService) lbs).registerSecurityToken("MedDRA", token);
 
@@ -393,7 +393,7 @@ public class TestSearchMethods {
 
 	public static void main(String [] args) {
 		try {
-			TestSearchMethods test = new TestSearchMethods();
+			SearchMethodExamples test = new SearchMethodExamples();
 			test.setUp();
 			test.testSearchMethods();
 		} catch (Exception ex) {
