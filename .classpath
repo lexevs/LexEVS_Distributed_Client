@@ -9,12 +9,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/caGrid-CQL-cql.1.0-1.2.jar"/>
-	<classpathentry kind="lib" path="lib/sdk-client-framework.jar"/>
-	<classpathentry kind="lib" path="lib/sdk-grid-remoting.jar"/>
-	<classpathentry kind="lib" path="lib/sdk-security.jar"/>
-	<classpathentry kind="lib" path="lib/lexevsapi64-beans.jar"/>
-	<classpathentry kind="lib" path="lib/lexbig.jar"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
