@@ -327,12 +327,6 @@
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
-			<artifactId>lexevs-remote-client</artifactId>
-			<version>6.4</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>lexevs</groupId>
 			<artifactId>lexevs-remote-security</artifactId>
 			<version>6.4</version>
 			<scope>provided</scope>
@@ -695,12 +689,6 @@
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
-			<artifactId>lexevsapi-framework</artifactId>
-			<version>6.4.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>lexevs</groupId>
 			<artifactId>LexEVSSecurity</artifactId>
 			<version>6.4.1</version>
 			<scope>provided</scope>
@@ -980,6 +968,16 @@
 			<version>1.2.14</version>
 		</dependency>
 
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexevs-remote-client</artifactId>
+			<version>6.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>

@@ -35,35 +35,35 @@ public class TestAllInOneTestClient {
 		lbs = (LexBIGService)LexEVSServiceHolder.instance().getLexEVSAppService();
 	}
 	
-//	@Test
-//	public void testListSchemes() throws LBInvocationException {
-//		CodingSchemeRenderingList csrl = lbs.getSupportedCodingSchemes();
-//		
-//		assertTrue(csrl.getCodingSchemeRenderingCount() > 0);
-//		
-//		System.out.println("No. of Coding Schemes: " + csrl.getCodingSchemeRenderingCount());
-//		for(int i = 0; i < csrl.getCodingSchemeRenderingCount(); i++)
-//		{
-//			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getLocalName());
-//			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getRepresentsVersion());
-//			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getCodingSchemeURI());
-//			System.out.println("********************");
-//		}
-//	}
-//	
-//	@Test
-//	public void testListFirstTenEntities() throws LBException{
-//		CodedNodeSet set = lbs.getCodingSchemeConcepts(THES_SCHEME, null);
-//		ResolvedConceptReferenceList rcrl = set.resolveToList(null, null, null, 10);
-//		assertTrue(rcrl.getResolvedConceptReferenceCount() > 0);
-//		System.out.println();
-//		for(ResolvedConceptReference ref: rcrl.getResolvedConceptReference()){
-//			System.out.println("Term: " + ref.getEntityDescription().getContent());
-//			System.out.println("********************");
-//		}
-//		
-//		System.out.println();
-//		}
+	@Test
+	public void testListSchemes() throws LBInvocationException {
+		CodingSchemeRenderingList csrl = lbs.getSupportedCodingSchemes();
+		
+		assertTrue(csrl.getCodingSchemeRenderingCount() > 0);
+		
+		System.out.println("No. of Coding Schemes: " + csrl.getCodingSchemeRenderingCount());
+		for(int i = 0; i < csrl.getCodingSchemeRenderingCount(); i++)
+		{
+			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getLocalName());
+			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getRepresentsVersion());
+			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getCodingSchemeURI());
+			System.out.println("********************");
+		}
+	}
+	
+	@Test
+	public void testListFirstTenEntities() throws LBException{
+		CodedNodeSet set = lbs.getCodingSchemeConcepts(THES_SCHEME, null);
+		ResolvedConceptReferenceList rcrl = set.resolveToList(null, null, null, 10);
+		assertTrue(rcrl.getResolvedConceptReferenceCount() > 0);
+		System.out.println();
+		for(ResolvedConceptReference ref: rcrl.getResolvedConceptReference()){
+			System.out.println("Term: " + ref.getEntityDescription().getContent());
+			System.out.println("********************");
+		}
+		
+		System.out.println();
+		}
 	
 	@Test
 	public void testGraphResolutionRandomTerm() throws LBException{
