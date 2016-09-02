@@ -204,6 +204,11 @@
 			<version>1.4</version>
 		</dependency>
 		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
 			<groupId>org.compass-project</groupId>
 			<artifactId>compass</artifactId>
 			<version>2.2.0</version>
@@ -324,6 +329,11 @@
 					<artifactId>protobuf-java</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexevs-remote-client</artifactId>
+			<version>6.4.1</version>
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
@@ -967,16 +977,10 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.14</version>
 		</dependency>
-
 		<dependency>
-			<groupId>lexevs</groupId>
-			<artifactId>lexevs-remote-client</artifactId>
-			<version>6.4.1</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
+			<groupId>com.healthmarketscience.rmiio</groupId>
+			<artifactId>rmiio</artifactId>
+			<version>2.0.2</version>
 		</dependency>
 	</dependencies>
 	<repositories>
@@ -1001,10 +1005,5 @@
 			<name>Informatics Maven Third Party Repository</name>
 			<url>http://informatics.mayo.edu/maven/content/repositories/thirdparty</url>
 		</repository>
-<!-- 		<repository>
-			<id>local.filebased</id>
-			<name>Local Repo</name>
-			<url>file://${project.basedir}/repo</url>
-		</repository> -->
 	</repositories>
 </project>

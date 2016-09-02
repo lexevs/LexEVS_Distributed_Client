@@ -112,7 +112,7 @@ public class SearchMethodExamples {
 		}
 
 	    scheme = "NCI Thesaurus";
-	    version = "Diacrtitics";
+//	    version = "Diacrtitics";
 	    matchText = "Waldenström";
 	    searchOption = BY_NAME;
 	    algorithm = "contains";
@@ -126,7 +126,7 @@ public class SearchMethodExamples {
 
 
         try {
-			wrapper = search(scheme, version, matchText, searchOption, algorithm);
+			wrapper = search(scheme, null, matchText, searchOption, algorithm);
 			if (wrapper == null) {
 				System.out.println("No results found.");
 			} else {

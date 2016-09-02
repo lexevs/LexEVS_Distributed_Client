@@ -47,7 +47,7 @@ import gov.nih.nci.system.client.ApplicationServiceProvider;
 
 
 public class SimpleSearchUtils {
-	private static String serviceUrl = "http://lexevsapi62.nci.nih.gov/lexevsapi62";
+	private static String serviceUrl = "http://localhost:8080/lexevsapi64";
 
 	private static Logger _logger = Logger.getLogger(SimpleSearchUtils.class);
 
@@ -288,11 +288,11 @@ public class SimpleSearchUtils {
 			Vector<String> schemes = new Vector();
 			Vector<String> versions = new Vector();
 			schemes.add("NCI_Thesaurus");
-			versions.add("15.01d");
+
 
 			//String matchText = "Hyperreactio Luteinalis Variant -- with Corpora Lutea";
 			System.out.println("EXACT MATCH: ");
-			iterator = search(schemes, versions, matchText, SimpleSearchUtils.BY_NAME, "contains");
+			iterator = search(schemes, null, matchText, SimpleSearchUtils.BY_NAME, "contains");
 			if (iterator != null) {
 					try {
 						int numRemaining = iterator.numberRemaining();

@@ -1,13 +1,11 @@
 package org.LexGrid.LexBIG.serviceHolder;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import org.LexGrid.LexBIG.DataModel.Collections.AssociationList;
 import org.LexGrid.LexBIG.DataModel.Collections.CodingSchemeRenderingList;
-import org.LexGrid.LexBIG.DataModel.Collections.LocalNameList;
 import org.LexGrid.LexBIG.DataModel.Collections.ResolvedConceptReferenceList;
 import org.LexGrid.LexBIG.DataModel.Core.AssociatedConcept;
 import org.LexGrid.LexBIG.DataModel.Core.Association;
-import org.LexGrid.LexBIG.DataModel.Core.CodingSchemeVersionOrTag;
 import org.LexGrid.LexBIG.DataModel.Core.ResolvedConceptReference;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.LexBIG.Exceptions.LBInvocationException;
@@ -16,14 +14,13 @@ import org.LexGrid.LexBIG.LexBIGService.CodedNodeGraph;
 import org.LexGrid.LexBIG.LexBIGService.CodedNodeSet;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.LexGrid.LexBIG.Utility.Constructors;
-import org.LexGrid.LexBIG.Utility.ConvenienceMethods;
 import org.LexGrid.commonTypes.EntityDescription;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
-//@FixMethodOrder(MethodSorters.JVM)
+@FixMethodOrder(MethodSorters.JVM)
 public class TestAllInOneTestClient {
 	
 	String THES_SCHEME = "Thesaurus";

@@ -24,7 +24,7 @@ import java.util.Vector;
 
 public class ExportExample {
 
-    private static String url = "http://ncias-d1224.nci.nih.gov:7080/lexevsapi63";
+    private static String url = "http://localhost:8080/lexevsapi64";
 
     public static ConceptReferenceList createConceptReferenceList(
             String[] codes, String codingSchemeName) {
@@ -97,7 +97,7 @@ public class ExportExample {
 
     public static String exportCartXML(String codingSchemeName, Vector v) throws Exception {
         LexEVSApplicationService svc =
-                (LexEVSApplicationService)ApplicationServiceProvider.getApplicationServiceFromUrl("http://lexevsapi62-dev.nci.nih.gov/lexevsapi62/", "EvsServiceInfo");;
+                (LexEVSApplicationService)ApplicationServiceProvider.getApplicationServiceFromUrl(url, "EvsServiceInfo");;
 
         LexEVSValueSetDefinitionServices vsd_service = svc.getLexEVSValueSetDefinitionServices();
         ValueSetDefinition vsd = new ValueSetDefinition();

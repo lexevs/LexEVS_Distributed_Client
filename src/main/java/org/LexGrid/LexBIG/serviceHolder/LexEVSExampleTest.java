@@ -79,7 +79,7 @@ public class LexEVSExampleTest {
 			testGetCodingSchemeGraph();
 			testSimpleSearchExtensionLucene();
 			testSimpleSearchExtensionContains();
-//			testSimpleSearchExtensionMultiWord();
+			testSimpleSearchExtensionMultiWord();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -204,7 +204,7 @@ public class LexEVSExampleTest {
 		System.out.println("*");
 		System.out.println("*");
 		System.out.println("********************************************************************");
-		System.out.println("FOR A GLOBAL SEARCH ON THE TEXT \"boxing\" PRINTING All Designations");
+		System.out.println("FOR A GLOBAL SEARCH ON THE TEXT \"blood\" PRINTING All Designations");
 		System.out.println("********************************************************************");
 		while(itr.hasNext()){
 		System.out.println(itr.next().getEntityDescription().getContent());
