@@ -124,7 +124,7 @@
 			<groupId>cagrid</groupId>
 			<artifactId>castor-bean-serializer</artifactId>
 			<version>6.4.1</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.castor</groupId>
@@ -151,7 +151,7 @@
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>2.2</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>cagrid</groupId>
@@ -339,7 +339,7 @@
 			<groupId>lexevs</groupId>
 			<artifactId>lexevs-remote-security</artifactId>
 			<version>6.4</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
@@ -443,14 +443,14 @@
 					<artifactId>slf4j-log4j12</artifactId>
 				</exclusion>
 			</exclusions>
-			<scope>provided</scope>
+			
 		</dependency>
 
 		<dependency>
 			<groupId>lexevs</groupId>
 			<artifactId>lexbig-interfaces</artifactId>
 			<version>${lexevs.version}</version>
-			<scope>provided</scope>
+			
 		</dependency>
 
 		<dependency>
@@ -517,8 +517,7 @@
 			<groupId>lexevs</groupId>
 			<artifactId>lexbig-impl</artifactId>
 			<version>${lexevs.version}</version>
-			<type>test-jar</type>
-			<scope>test</scope>
+
 		</dependency>
 
 		<dependency>
@@ -688,20 +687,19 @@
 			<groupId>lexevs</groupId>
 			<artifactId>lexevs-dao</artifactId>
 			<version>${lexevs.version}</version>
-			<type>test-jar</type>
-			<scope>test</scope>
+
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
 			<artifactId>lexevsapi-beans</artifactId>
 			<version>6.4.1</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
 			<artifactId>LexEVSSecurity</artifactId>
 			<version>6.4.1</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
@@ -809,37 +807,37 @@
 			<groupId>sdk</groupId>
 			<artifactId>sdk-client-framework</artifactId>
 			<version>6.4.1</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>sdk</groupId>
 			<artifactId>sdk-grid-remoting</artifactId>
 			<version>6.4.1</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>sdk</groupId>
 			<artifactId>sdk-security</artifactId>
 			<version>6.4.1</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-asm</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.batch</groupId>
@@ -859,79 +857,79 @@
 					<artifactId>jettison</artifactId>
 				</exclusion>
 			</exclusions>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.batch</groupId>
 			<artifactId>spring-batch-infrastructure</artifactId>
 			<version>2.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>3.1.0.RELEASE</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>2.5.6</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>2.5.6</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.ws</groupId>
@@ -943,7 +941,7 @@
 					<artifactId>stax-api</artifactId>
 				</exclusion>
 			</exclusions>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>com.healthmarketscience.sqlbuilder</groupId>
@@ -954,7 +952,7 @@
 			<groupId>cagrid</groupId>
 			<artifactId>caGrid-CQL-cql.1.0</artifactId>
 			<version>1.2</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

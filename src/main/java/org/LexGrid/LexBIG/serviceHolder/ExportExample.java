@@ -174,7 +174,7 @@ public class ExportExample {
     public static void main(String [ ] args)
     {
         try {
-            String codingSchemeName = "NCI_Thesaurus";
+            String codingSchemeName = "Thesaurus";
             Vector v = new Vector();
             v.add("C12354");
 

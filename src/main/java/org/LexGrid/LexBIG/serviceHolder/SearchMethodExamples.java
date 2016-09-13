@@ -111,7 +111,7 @@ public class SearchMethodExamples {
 
 		}
 
-	    scheme = "NCI Thesaurus";
+	    scheme = "Thesaurus";
 //	    version = "Diacrtitics";
 	    matchText = "Waldenström";
 	    searchOption = BY_NAME;
