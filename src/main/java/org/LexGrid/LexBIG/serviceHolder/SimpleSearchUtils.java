@@ -47,7 +47,7 @@ import gov.nih.nci.system.client.ApplicationServiceProvider;
 
 
 public class SimpleSearchUtils {
-	private static String serviceUrl = "http://localhost:8080/lexevsapi64";
+	private static String serviceUrl = "https://lexevsapi6.nci.nih.gov/lexevsapi64";
 
 	private static Logger _logger = Logger.getLogger(SimpleSearchUtils.class);
 

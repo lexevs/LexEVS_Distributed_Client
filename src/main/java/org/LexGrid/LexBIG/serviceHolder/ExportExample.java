@@ -24,7 +24,7 @@ import java.util.Vector;
 
 public class ExportExample {
 
-    private static String url = "http://localhost:8080/lexevsapi64";
+    private static String url = "https://lexevsapi6.nci.nih.gov/lexevsapi64";
 
     public static ConceptReferenceList createConceptReferenceList(
             String[] codes, String codingSchemeName) {
