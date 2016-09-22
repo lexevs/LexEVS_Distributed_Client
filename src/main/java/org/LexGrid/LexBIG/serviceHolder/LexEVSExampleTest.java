@@ -41,21 +41,13 @@ import org.LexGrid.LexBIG.Impl.Extensions.tree.model.LexEvsTreeNode;
 import org.LexGrid.LexBIG.Impl.Extensions.tree.service.TreeService;
 import org.LexGrid.LexBIG.Impl.Extensions.tree.service.TreeServiceFactory;
 import org.LexGrid.LexBIG.Impl.Extensions.tree.utility.PrintUtility;
-//import org.lexevs.tree.model.LexEvsTree;
-//import org.lexevs.tree.model.LexEvsTreeNode;
-//import org.lexevs.tree.service.TreeService;
-//import org.lexevs.tree.service.TreeServiceFactory;
-//import org.lexevs.tree.utility.PrintUtility;
 import org.LexGrid.LexBIG.LexBIGService.CodedNodeSet;
 import org.LexGrid.LexBIG.LexBIGService.CodedNodeSet.SearchDesignationOption;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.LexGrid.LexBIG.Utility.ConvenienceMethods;
 import org.LexGrid.LexBIG.Utility.Iterators.ResolvedConceptReferencesIterator;
 import org.LexGrid.commonTypes.EntityDescription;
-//import org.lexevs.tree.model.LexEvsTree;
-//import org.lexevs.tree.model.LexEvsTreeNode;
-//import org.lexevs.tree.service.TreeService;
-//import org.lexevs.tree.utility.PrintUtility;
+
 
 public class LexEVSExampleTest {
 	String THES_SCHEME = "Thesaurus";
@@ -72,8 +64,6 @@ public class LexEVSExampleTest {
 	public void run(){
 		try {
 			setUp();
-//			testTree();
-//			testMappingExtension();
 			testGetSupportedCodingSchemes();
 			testGetCodingSchemeConcepts();
 			testGetCodingSchemeGraph();
@@ -81,7 +71,6 @@ public class LexEVSExampleTest {
 			testSimpleSearchExtensionContains();
 			testSimpleSearchExtensionMultiWord();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -92,62 +81,9 @@ public class LexEVSExampleTest {
 		lbs = (LexBIGService)LexEVSServiceHolder.instance().getLexEVSAppService();
 	}
 
-	public void testTree() throws LBException{
-		TreeService service = TreeServiceFactory.getInstance().getTreeService(lbs);
- //       TreeService service = (TreeService)lbs.getGenericExtension("lex-tree-utility");;
-        LexEvsTree tree = null;
-        CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
-        csvt.setVersion("April2015");
-//         tree = service.getTree("npo", csvt, "NPO_1607", "npo", "is_a");
-         tree = service.getTree("OBI", csvt, "BFO_0000002","obo");
-//         tree = service.getTree("npo", csvt, "NPO_1607");
-            LexEvsTreeNode focusNode = tree.getCurrentFocus();
-            List<LexEvsTreeNode> nodeList = service.getEvsTreeConverter().buildEvsTreePathFromRootTree(focusNode);
-            assert(nodeList.size() > 0);
-            PrintUtility.print(nodeList);
-            PrintUtility.print(focusNode);
-            String jsonString =
-            		service.getJsonConverter().buildJsonPathFromRootTree(focusNode);
-            System.out.println(jsonString);
-	}
 	
-	public void testMappingExtension(){
-		MappingExtension mappingExtension = null;
-		try {
-			mappingExtension = (MappingExtension)lbs.getGenericExtension("MappingExtension");
-		} catch (LBException e) {
-			e.printStackTrace();
-		}
-		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
-		csvt.setVersion("1.2");
-		Mapping mapping = null;
-		try {
-			mapping = mappingExtension.getMapping("NCIt_to_ChEBI_Mapping", csvt, "NCIt_to_ChEBI_Mapping");
-		} catch (LBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-			if (mapping != null) {
-				try {
-					mapping = mapping.restrictToMatchingDesignations(
-								"Warfarin", SearchDesignationOption.ALL, "LuceneQuery", null, SearchContext.SOURCE_OR_TARGET_CODES);
-					ResolvedConceptReferencesIterator itr = mapping.resolveMapping();
-
-					while(itr.hasNext()){
-						ResolvedConceptReference rcr = itr.next();
-						System.out.println(rcr.getEntityDescription().getContent() + " : " 
-						+ rcr.getSourceOf().getAssociation(0).getAssociatedConcepts().getAssociatedConcept(0).getCode());
-					   break;
-				
-					}
-				} catch (LBException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 	
-			}
-	}
+	
 			
 	public void testGetSupportedCodingSchemes() throws Exception{
 		CodingSchemeRenderingList csrl = lbs.getSupportedCodingSchemes();
@@ -170,14 +106,13 @@ public class LexEVSExampleTest {
 			
 			if(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getFormalName().equals(THES_SCHEME) ){
 				if(csrl.getCodingSchemeRendering(i).getRenderingDetail().getVersionTags().getTagCount() > 0){}
-//				{THES_VERSION = csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getRepresentsVersion();}
+
 			}
 		}
 	}
 	
 	public void testGetCodingSchemeConcepts() throws Exception{
-//		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
-//		csvt.setVersion(THES_VERSION);
+
 		CodedNodeSet cns = lbs.getCodingSchemeConcepts(THES_SCHEME, null);
 		cns = cns.restrictToMatchingDesignations("blood", SearchDesignationOption.PREFERRED_ONLY, "LuceneQuery", null);
 		ResolvedConceptReferenceList  rcrl = cns.resolveToList(null, null, null, 10);
@@ -249,8 +184,6 @@ public class LexEVSExampleTest {
 	}
 	
 	public void testGetCodingSchemeGraph() throws Exception{
-//		CodingSchemeVersionOrTag csvt = new CodingSchemeVersionOrTag();
-//		csvt.setVersion(THES_VERSION);
 		System.out.println("*");
 		System.out.println("*");
 		System.out.println("*");
