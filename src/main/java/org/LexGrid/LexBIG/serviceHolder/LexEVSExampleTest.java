@@ -50,7 +50,7 @@ import org.LexGrid.commonTypes.EntityDescription;
 
 
 public class LexEVSExampleTest {
-	String THES_SCHEME = "Thesaurus";
+	String THES_SCHEME = "NCI_Thesaurus";
 	LexBIGService lbs;
 	SearchExtension searchExtension;
 	/**
@@ -141,8 +141,10 @@ public class LexEVSExampleTest {
 		System.out.println("********************************************************************");
 		System.out.println("FOR A GLOBAL SEARCH ON THE TEXT \"blood\" PRINTING All Designations");
 		System.out.println("********************************************************************");
-		while(itr.hasNext()){
+		int limitOutputTo = 0;
+		while(itr.hasNext() && limitOutputTo < 10){
 		System.out.println(itr.next().getEntityDescription().getContent());
+		limitOutputTo++;
 		}
 	}
 	
@@ -213,7 +215,7 @@ public class LexEVSExampleTest {
         System.out.println("Points to ...");
 
         ResolvedConceptReferenceList matches = lbSvc.getNodeGraph(scheme, csvt, null).resolveAsList(ConvenienceMethods.createConceptReference(code, scheme), true, false, 1, 1,
-                new LocalNameList(), null, null, 1024);
+                new LocalNameList(), null, null, 10);
 
         // Analyze the result ...
         if (matches.getResolvedConceptReferenceCount() > 0) {
@@ -241,7 +243,7 @@ public class LexEVSExampleTest {
         // Perform the query ...
         System.out.println("Pointed at by ...");
         ResolvedConceptReferenceList matches = lbSvc.getNodeGraph(scheme, csvt, null).resolveAsList(ConvenienceMethods.createConceptReference(code, scheme), false, true, 1, 1,
-                new LocalNameList(), null, null, 1024);
+                new LocalNameList(), null, null, 10);
 
         // Analyze the result ...
         if (matches.getResolvedConceptReferenceCount() > 0) {

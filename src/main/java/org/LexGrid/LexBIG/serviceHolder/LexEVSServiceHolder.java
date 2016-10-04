@@ -29,7 +29,6 @@ public class LexEVSServiceHolder {
     private ApplicationService appService = null;
 
 	private static final String serviceUrl = "https://lexevsapi6.nci.nih.gov/lexevsapi64";
-//	private static final String serviceUrl = "https://lexevsapi6.nci.nih.gov/lexevsapi64";
 	private LexEVSApplicationService lexevsAppService;
 	public static final String _service = "EvsServiceInfo";
 	
