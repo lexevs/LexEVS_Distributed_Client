@@ -23,7 +23,7 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.JVM)
 public class TestAllInOneTestClient {
 	
-	String THES_SCHEME = "Thesaurus";
+	String THES_SCHEME = "NCI_Thesaurus";
 	static LexBIGService lbs;
 	SearchExtension searchExtension;
 	
@@ -41,10 +41,12 @@ public class TestAllInOneTestClient {
 		System.out.println("No. of Coding Schemes: " + csrl.getCodingSchemeRenderingCount());
 		for(int i = 0; i < csrl.getCodingSchemeRenderingCount(); i++)
 		{
+			if(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getLocalName().equals(THES_SCHEME)){
 			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getLocalName());
 			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getRepresentsVersion());
 			System.out.println(csrl.getCodingSchemeRendering(i).getCodingSchemeSummary().getCodingSchemeURI());
 			System.out.println("********************");
+			}
 		}
 	}
 	
