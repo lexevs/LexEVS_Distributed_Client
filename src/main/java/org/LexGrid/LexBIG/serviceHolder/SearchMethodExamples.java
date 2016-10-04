@@ -111,11 +111,40 @@ public class SearchMethodExamples {
 
 		}
 
-	    scheme = "Thesaurus";
-//	    version = "Diacrtitics";
+	    scheme = "NCI_Thesaurus";
 	    matchText = "Waldenström";
 	    searchOption = BY_NAME;
 	    algorithm = "contains";
+
+	    System.out.println("Test case: " );
+	    System.out.println("\tcoding scheme: " + scheme);
+	    System.out.println("\tversion: " + version);
+	    System.out.println("\tmatchText: " + matchText);
+	    System.out.println("\tsearchOption: BY_NAME");
+	    System.out.println("\talgorithm: " + algorithm);
+
+
+        try {
+			wrapper = search(scheme, null, matchText, searchOption, algorithm);
+			if (wrapper == null) {
+				System.out.println("No results found.");
+			} else {
+				ResolvedConceptReferencesIterator iterator = wrapper.getIterator();
+				try {
+					int num = iterator.numberRemaining();
+					System.out.println("Numbe of matches: " + num);
+				} catch (Exception ex) {
+
+				}
+			}
+		} catch (LBException ex) {
+
+		}
+        
+	    scheme = "NCI_Thesaurus";
+	    matchText = "Hyperreactio Luteinalis Variant -- with Corpora Lutea";
+	    searchOption = BY_NAME;
+	    algorithm = "exactMatch";
 
 	    System.out.println("Test case: " );
 	    System.out.println("\tcoding scheme: " + scheme);
