@@ -1,7 +1,9 @@
 package org.LexGrid.LexBIG.serviceHolder;
 import gov.nih.nci.evs.security.SecurityToken;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.Vector;
 
@@ -77,7 +79,6 @@ public class SearchMethodExamples {
 
     public void testSearchMethods() throws Exception {
 
-	    boolean bool_val = true;
 
 	    String scheme = "NCI Metathesaurus";
 	    String version = null;
@@ -251,8 +252,8 @@ public class SearchMethodExamples {
     public ResolvedConceptReferencesIteratorWrapper search(
         String scheme, String version, String matchText, int searchOption, String algorithm) throws LBException {
 		if (scheme == null) return null;
-		Vector<String> schemes = new Vector();
-		Vector<String> versions = new Vector();
+		List<String> schemes = new ArrayList<String>();
+		List<String> versions = new ArrayList<String>();
 		schemes.add(scheme);
 		versions.add(version);
 		return search(schemes, versions, matchText, searchOption, algorithm);
@@ -273,7 +274,7 @@ public class SearchMethodExamples {
 
 
     public ResolvedConceptReferencesIteratorWrapper search(
-        Vector<String> schemes, Vector<String> versions, String matchText, int searchOption, String algorithm) throws LBException {
+        List<String> schemes, List<String> versions, String matchText, int searchOption, String algorithm) throws LBException {
 
 	    if (schemes == null|| versions == null) return null;
 	    if (schemes.size() != versions.size()) return null;
@@ -286,15 +287,14 @@ public class SearchMethodExamples {
 		try {
 			searchExtension = (SearchExtension) lbs.getGenericExtension("SearchExtension");
 		} catch (Exception e){
-			//_logger.warn("SearchExtension is not available.");
 			return null;
 		}
 
-        Set<CodingSchemeReference> includes = new HashSet();
+        Set<CodingSchemeReference> includes = new HashSet<CodingSchemeReference>();
 
         for (int i=0; i<schemes.size(); i++) {
-			String scheme = (String) schemes.elementAt(i);
-			String version = (String) versions.elementAt(i);
+			String scheme = (String) schemes.get(i);
+			String version = (String) versions.get(i);
 			CodingSchemeReference ref = new CodingSchemeReference();
 			ref.setCodingScheme(scheme);
 
@@ -362,9 +362,6 @@ public class SearchMethodExamples {
 	}
 
 	public class ResolvedConceptReferencesIteratorWrapper {
-
-		/** The Constant serialVersionUID. */
-		private static final long serialVersionUID = 4126716487618136771L;
 
 		/** The lbs. */
 		private ResolvedConceptReferencesIterator _iterator;
