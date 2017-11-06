@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>lexevs.dist.client</groupId>
 	<artifactId>lexevs.dist.client</artifactId>
-	<version>6.4.2.SNAPSHOT</version>
+	<version>6.5.0.FINAL</version>
 
 	<properties>
 		<forkMode>never</forkMode>
-		<lexevs.version>6.4.1.FINAL</lexevs.version>
+		<lexevs.version>6.5.0.FINAL</lexevs.version>
 		<cagrid.version>1.3</cagrid.version>
-		<lexevs.remote.version>6.4.1</lexevs.remote.version>
+		<lexevs.remote.version>6.5.0.FINAL</lexevs.remote.version>
 	</properties>
 
 	<build>
@@ -333,18 +333,18 @@
 		<dependency>
 			<groupId>lexevs</groupId>
 			<artifactId>lexevs-remote-client</artifactId>
-			<version>6.4.2</version>
+			<version>${lexevs.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
 			<artifactId>lexevs-remote-security</artifactId>
-			<version>6.4</version>
+			<version>${lexevs.version}</version>
 			
 		</dependency>
 		<dependency>
 			<groupId>lexevs</groupId>
 			<artifactId>lexbig-impl</artifactId>
-			<version>6.4.0.FINAL</version>
+			<version>${lexevs.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
@@ -692,13 +692,7 @@
 		<dependency>
 			<groupId>lexevs</groupId>
 			<artifactId>lexevsapi-beans</artifactId>
-			<version>6.4.1</version>
-			
-		</dependency>
-		<dependency>
-			<groupId>lexevs</groupId>
-			<artifactId>LexEVSSecurity</artifactId>
-			<version>6.4.1</version>
+			<version>${lexevs.version}</version>
 			
 		</dependency>
 		<dependency>
@@ -986,11 +980,23 @@
 			<id>taccaci</id>
 			<name>TACC ACI Maven repository</name>
 			<url>https://maven.tacc.utexas.edu/nexus/content/repositories/public</url>
-		</repository>
+		</repository>	
 		<repository>
-			<id>edu.informatics.maven.releases</id>
-			<name>Informatics Maven Release Repository</name>
-			<url>http://informatics.mayo.edu/maven/content/repositories/releases</url>
+			<id>nci.maven.snapshot</id>
+			<name>NCI Maven Snapshot Repository</name>
+			<url>https://ncimvn.nci.nih.gov/nexus/content/repositories/LexEVSSnapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>nci.maven.releases</id>
+			<name>NCI Maven Release Repository</name>
+			<url>https://ncimvn.nci.nih.gov/nexus/content/repositories/LexEVSRelease</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -998,10 +1004,11 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		
 		<repository>
-			<id>edu.informatics.maven.thirdparty</id>
-			<name>Informatics Maven Third Party Repository</name>
-			<url>http://informatics.mayo.edu/maven/content/repositories/thirdparty</url>
+			<id>nci.maven.thirdparty</id>
+			<name>NCI Maven 3rd Party Repository</name>
+			<url>https://ncimvn.nci.nih.gov/nexus/content/repositories/LexEVS3rdParty</url>
 		</repository>
 	</repositories>
 </project>
