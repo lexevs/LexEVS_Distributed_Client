@@ -6,12 +6,15 @@ import org.LexGrid.LexBIG.DataModel.Collections.CodingSchemeRenderingList;
 import org.LexGrid.LexBIG.DataModel.Collections.ResolvedConceptReferenceList;
 import org.LexGrid.LexBIG.DataModel.Core.AssociatedConcept;
 import org.LexGrid.LexBIG.DataModel.Core.Association;
+import org.LexGrid.LexBIG.DataModel.Core.CodingSchemeVersionOrTag;
 import org.LexGrid.LexBIG.DataModel.Core.ResolvedConceptReference;
 import org.LexGrid.LexBIG.Exceptions.LBException;
 import org.LexGrid.LexBIG.Exceptions.LBInvocationException;
 import org.LexGrid.LexBIG.Extensions.Generic.SearchExtension;
+import org.LexGrid.LexBIG.Extensions.Generic.SearchExtension.MatchAlgorithm;
 import org.LexGrid.LexBIG.LexBIGService.CodedNodeGraph;
 import org.LexGrid.LexBIG.LexBIGService.CodedNodeSet;
+import org.LexGrid.LexBIG.LexBIGService.CodedNodeSet.SearchDesignationOption;
 import org.LexGrid.LexBIG.LexBIGService.LexBIGService;
 import org.LexGrid.LexBIG.Utility.Constructors;
 import org.LexGrid.commonTypes.EntityDescription;
@@ -51,18 +54,28 @@ public class TestAllInOneTestClient {
 	}
 	
 	@Test
-	public void testListFirstTenEntities() throws LBException{
-		CodedNodeSet set = lbs.getCodingSchemeConcepts(THES_SCHEME, null);
+	public void testSearch() throws LBException{
+		String metathesaurus = "NCI Metathesaurus";
+		CodingSchemeVersionOrTag version = new CodingSchemeVersionOrTag();
+		version.setVersion("201808");
+		
+		String matchText = "age";
+		SearchDesignationOption option = SearchDesignationOption.ALL;
+		String matchAlgorithm = "exactMatch";
+				
+		CodedNodeSet set = lbs.getCodingSchemeConcepts(metathesaurus, version);
+		set = set.restrictToMatchingDesignations(matchText, option, matchAlgorithm, null);
+				
 		ResolvedConceptReferenceList rcrl = set.resolveToList(null, null, null, 10);
 		assertTrue(rcrl.getResolvedConceptReferenceCount() > 0);
+		
 		System.out.println();
 		for(ResolvedConceptReference ref: rcrl.getResolvedConceptReference()){
+			System.out.println("Code: " + ref.getCode());
 			System.out.println("Term: " + ref.getEntityDescription().getContent());
 			System.out.println("********************");
 		}
-		
-		System.out.println();
-		}
+	}
 	
 	@Test
 	public void testGraphResolutionRandomTerm() throws LBException{

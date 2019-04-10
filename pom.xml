@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>lexevs.dist.client</groupId>
 	<artifactId>lexevs.dist.client</artifactId>
-	<version>6.5.1.FINAL</version>
+	<version>6.5.2.FINAL</version>
 
 	<properties>
 		<forkMode>never</forkMode>
-		<lexevs.version>6.5.1.FINAL</lexevs.version>
+		<lexevs.version>6.5.2.FINAL</lexevs.version>
 		<cagrid.version>1.3</cagrid.version>
-		<lexevs.remote.version>6.5.1.FINAL</lexevs.remote.version>
+		<lexevs.remote.version>6.5.2.FINAL</lexevs.remote.version>
 	</properties>
 
 	<build>
