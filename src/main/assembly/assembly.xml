@@ -11,14 +11,4 @@
       <outputDirectory>lib</outputDirectory>
     </dependencySet>
   </dependencySets>
-  <fileSets>
-    <fileSet>
-      <directory>src/main/command</directory>
-      <outputDirectory>bin</outputDirectory>
-      <includes>
-        <include>*.sh</include>
-        <include>*.bat</include>
-      </includes>
-    </fileSet>
-  </fileSets>
 </assembly>
